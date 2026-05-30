@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Girlfriend Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7fb;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    section {
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .options {
+      margin-top: 8px;
+    }
+
+    .options label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #574fd6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Girlfriend Application</h1>
+
+    <form id="applicationForm">
+
+      <section>
+        <h2>Basic Information</h2>
+
+        <label>Name</label>
+        <input type="text" name="name" />
+
+        <label>Age</label>
+        <input type="text" name="age" />
+
+        <label>VRChat Username</label>
+        <input type="text" name="vrchat" />
+
+        <label>Timezone</label>
+        <input type="text" name="timezone" />
+
+        <label>Height</label>
+        <input type="text" name="height" />
+
+        <label>Favorite Color</label>
+        <input type="text" name="color" />
+
+        <label>Socials</label>
+        <input type="text" name="socials" />
+      </section>
+
+      <section>
+        <h2>Personality Check</h2>
+
+        <label>Describe yourself in 3 words</label>
+        <input type="text" name="three_words" />
+
+        <label>Biggest green flag</label>
+        <input type="text" name="green_flag" />
+
+        <label>Biggest red flag</label>
+        <input type="text" name="red_flag" />
+
+        <label>Attachment style</label>
+        <div class="options">
+          <label><input type="radio" name="attachment" value="Clingy" /> Clingy</label>
+          <label><input type="radio" name="attachment" value="Independent" /> Independent</label>
+          <label><input type="radio" name="attachment" value="Both" /> Both</label>
+        </div>
+
+        <label>Reply speed</label>
+        <div class="options">
+          <label><input type="radio" name="reply" value="Instant" /> Instantly</label>
+          <label><input type="radio" name="reply" value="Fast" /> Few minutes</label>
+          <label><input type="radio" name="reply" value="Slow" /> Disappear for hours</label>
+        </div>
+
+        <label>Sarcasm</label>
+        <div class="options">
+          <label><input type="radio" name="sarcasm" value="Yes" /> Yes</label>
+          <label><input type="radio" name="sarcasm" value="No" /> No</label>
+          <label><input type="radio" name="sarcasm" value="I am sarcasm" /> I am sarcasm</label>
+        </div>
+      </section>
+
+      <section>
+        <h2>Relationship Questions</h2>
+
+        <label>Ideal date idea</label>
+        <input type="text" name="date" />
+
+        <label>Favorite thing to do together</label>
+        <input type="text" name="activity" />
+
+        <label>Love language</label>
+        <div class="options">
+          <label><input type="radio" name="love" value="Words" /> Words of affirmation</label>
+          <label><input type="radio" name="love" value="Touch" /> Physical touch</label>
+          <label><input type="radio" name="love" value="Time" /> Quality time</label>
+          <label><input type="radio" name="love" value="Gifts" /> Gift giving</label>
+          <label><input type="radio" name="love" value="Acts" /> Acts of service</label>
+        </div>
+
+        <label>Would you do activities together?</label>
+        <input type="text" name="hobbies" />
+
+        <label>Jealousy explanation</label>
+        <textarea name="jealousy"></textarea>
+      </section>
+
+      <section>
+        <h2>Random Questions</h2>
+
+        <label>Favorite music</label>
+        <input type="text" name="music" />
+
+        <label>Favorite food</label>
+        <input type="text" name="food" />
+
+        <label>Cats or dogs?</label>
+        <div class="options">
+          <label><input type="radio" name="pets" value="Cats" /> Cats</label>
+          <label><input type="radio" name="pets" value="Dogs" /> Dogs</label>
+          <label><input type="radio" name="pets" value="Both" /> Both</label>
+        </div>
+
+        <label>Sleep schedule</label>
+        <div class="options">
+          <label><input type="radio" name="sleep" value="Healthy" /> Healthy</label>
+          <label><input type="radio" name="sleep" value="Terrible" /> Terrible</label>
+          <label><input type="radio" name="sleep" value="No sleep" /> No sleep</label>
+        </div>
+
+        <label>Most unhinged thing you’ve done</label>
+        <textarea name="unhinged"></textarea>
+
+        <label>Rate yourself 1–10</label>
+        <input type="text" name="rating" />
+      </section>
+
+      <section>
+        <h2>Final Section</h2>
+
+        <label>Why should you be accepted?</label>
+        <textarea name="why"></textarea>
+
+        <label>Anything else to add?</label>
+        <textarea name="extra"></textarea>
+      </section>
+
+      <button class="submit-btn" type="submit">Submit Application</button>
+    </form>
+  </div>
+
+<script>
+const webhookURL = "https://discord.com/api/webhooks/1510165429803286659/0i5HfdiYceY5wBYJAS-XXKUXuvTPMc4U4AU92n4Bv-sHQen1v8n-38bIe4CDJYCHbT4u";
+
+const labels = {
+  name: "Name",
+  age: "Age",
+  vrchat: "VRChat Username",
+  timezone: "Timezone",
+  height: "Height",
+  color: "Favorite Color",
+  socials: "Socials",
+  three_words: "3 Words",
+  green_flag: "Green Flag",
+  red_flag: "Red Flag",
+  attachment: "Attachment Style",
+  reply: "Reply Speed",
+  sarcasm: "Sarcasm",
+  date: "Ideal Date",
+  activity: "Activity Together",
+  love: "Love Language",
+  hobbies: "Hobbies Together",
+  jealousy: "Jealousy Explanation",
+  music: "Music",
+  food: "Food",
+  pets: "Pets",
+  sleep: "Sleep",
+  unhinged: "Unhinged Thing",
+  rating: "Rating",
+  why: "Why Accept You",
+  extra: "Extra"
+};
+
+document.getElementById("applicationForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const form = new FormData(e.target);
+  let message = "💌 **New Girlfriend Application** 💌\n\n";
+
+  for (let [key, value] of form.entries()) {
+    const label = labels[key] || key;
+    message += `**${label}**\n${value}\n\n`;
+  }
+
+  await fetch(webhookURL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ content: message })
+  });
+
+  alert("Submitted!");
+  e.target.reset();
+});
+</script>
+
+</body>
+</html>
